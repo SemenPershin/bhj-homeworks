@@ -17,14 +17,13 @@ class Game {
   }
 
   registerEvents() {
-    let thisObject = this;
-    document.addEventListener('keydown', function(event) {
+    document.addEventListener('keydown', event => {
       let symbol = event.key;
 
-      if (symbol.toLowerCase() == thisObject.currentSymbol.textContent) {
-        thisObject.success();
+      if (symbol.toLowerCase() ==this.currentSymbol.textContent) {
+        this.success();
       } else {
-        thisObject.fail();
+        this.fail();
       }
     })
   }
